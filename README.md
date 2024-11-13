@@ -16,6 +16,13 @@
 - [x] : 테스트 코드 퀴즈 - 컨트롤러 테스트의 이해
   - 테스트 패키지 `org.example.expert.domain.todo.controller` 의 `todo_단건_조회_시_todo가_존재하지_않아_예외가_발생한다()` 테스트를 수정
     - 해당 테스트가 정상적으로 통과할 수 있어야 함
+- [x] : 코드 개선 퀴즈 - JPA 의 이해
+  - `API(GET /todos)` 요청시 아래의 내용을 만족할 수 있도록 코드를 수정
+    - `weather` 를 검색 조건을 사용할 수 있어야 한다.
+      - 단, 검색시 `weather` 조건이 있던 없던 검색이 가능해야 한다.
+    - `modifiedAt(수정일)` 기준으로 `기간 검색` 이 가능해야 한다.
+      - 검색할 `기간` 에 대한 조건이 있던 없던 검색이 가능해야 한다.
+    - `JPQL` 을 사용하고, `쿼리 메서드명` 은 자유롭게 지정가능하나 너무 길지 않도록 한다.
 <br/><br/><br/>
 
 # 프로젝트 관련 포스팅
@@ -24,3 +31,4 @@
 - [Level 1-2 : 코드 추가 퀴즈 - JWT 의 이해](https://development-diary-for-me.tistory.com/195)
 - [Level 1-3 : 코드 개선 퀴즈 - AOP 의 이해](https://development-diary-for-me.tistory.com/196)
 - [Level 1-4 : 테스트 코드 퀴즈 - 컨트롤러 테스트의 이해](https://development-diary-for-me.tistory.com/197)
+- [Level 1-5 : 코드 개선 퀴즈 - JPA 의 이해](https://development-diary-for-me.tistory.com/198)
