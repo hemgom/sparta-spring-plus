@@ -13,6 +13,9 @@
 - [x] : 코드 개선 퀴즈 - `AOP` 의 이해
   - `AdminAccessLoggingAspect` 클래스의 `logAfterChangeUserRole()` 을 수정
     - `UserAdminController` 클래스의 `changeUserRole() 실행 전` 에 `logAfterChangeUserRole()` 가 수행되어야 함
+- [x] : 테스트 코드 퀴즈 - 컨트롤러 테스트의 이해
+  - 테스트 패키지 `org.example.expert.domain.todo.controller` 의 `todo_단건_조회_시_todo가_존재하지_않아_예외가_발생한다()` 테스트를 수정
+    - 해당 테스트가 정상적으로 통과할 수 있어야 함
 <br/><br/><br/>
 
 # 프로젝트 관련 포스팅
@@ -20,3 +23,4 @@
 - [Level 1-1 : 코드 개선 퀴즈 - @Transactional 의 이해](https://development-diary-for-me.tistory.com/193)
 - [Level 1-2 : 코드 추가 퀴즈 - JWT 의 이해](https://development-diary-for-me.tistory.com/195)
 - [Level 1-3 : 코드 개선 퀴즈 - AOP 의 이해](https://development-diary-for-me.tistory.com/196)
+- [Level 1-4 : 테스트 코드 퀴즈 - 컨트롤러 테스트의 이해](https://development-diary-for-me.tistory.com/197)
