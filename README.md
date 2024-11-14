@@ -23,6 +23,12 @@
     - `modifiedAt(수정일)` 기준으로 `기간 검색` 이 가능해야 한다.
       - 검색할 `기간` 에 대한 조건이 있던 없던 검색이 가능해야 한다.
     - `JPQL` 을 사용하고, `쿼리 메서드명` 은 자유롭게 지정가능하나 너무 길지 않도록 한다.
+<br/>
+
+### Level.02
+- [x] : JPA Cascade
+  - 실수로 작제된 코드를 다시 작성한다. 작성할 코드는 아래의 조건을 만족해야 한다.
+    - `JPA` 의 `cascade` 기능을 활용해 일정을 생성한 유저가 `자동으로 담당자로 등록` 될 수 있도록 해야 한다.
 <br/><br/><br/>
 
 # 프로젝트 관련 포스팅
@@ -32,3 +38,4 @@
 - [Level 1-3 : 코드 개선 퀴즈 - AOP 의 이해](https://development-diary-for-me.tistory.com/196)
 - [Level 1-4 : 테스트 코드 퀴즈 - 컨트롤러 테스트의 이해](https://development-diary-for-me.tistory.com/197)
 - [Level 1-5 : 코드 개선 퀴즈 - JPA 의 이해](https://development-diary-for-me.tistory.com/198)
+- [Level 2-1 : JPA Cascade](https://development-diary-for-me.tistory.com/199)
