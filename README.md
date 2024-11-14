@@ -29,6 +29,8 @@
 - [x] : JPA Cascade
   - 실수로 작제된 코드를 다시 작성한다. 작성할 코드는 아래의 조건을 만족해야 한다.
     - `JPA` 의 `cascade` 기능을 활용해 일정을 생성한 유저가 `자동으로 담당자로 등록` 될 수 있도록 해야 한다.
+- [x] : N+1
+  - `API(GET /todos/{todoId}/comments)` 요청시 발생하고 있는 `N+1` 문제를 해결할 수 있도록 코드를 수정
 <br/><br/><br/>
 
 # 프로젝트 관련 포스팅
@@ -39,3 +41,4 @@
 - [Level 1-4 : 테스트 코드 퀴즈 - 컨트롤러 테스트의 이해](https://development-diary-for-me.tistory.com/197)
 - [Level 1-5 : 코드 개선 퀴즈 - JPA 의 이해](https://development-diary-for-me.tistory.com/198)
 - [Level 2-1 : JPA Cascade](https://development-diary-for-me.tistory.com/199)
+- [Level 2-2 : N+1](https://development-diary-for-me.tistory.com/200)
