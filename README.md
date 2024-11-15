@@ -31,6 +31,9 @@
     - `JPA` 의 `cascade` 기능을 활용해 일정을 생성한 유저가 `자동으로 담당자로 등록` 될 수 있도록 해야 한다.
 - [x] : N+1
   - `API(GET /todos/{todoId}/comments)` 요청시 발생하고 있는 `N+1` 문제를 해결할 수 있도록 코드를 수정
+- [x] : QueryDSL
+  - `JPQL` 로 작성된 `TodoRepository` 인터페이스의 `findByIdWithUser()` 를 `QueryDSL` 를 사용하도록 수정
+  - `N+1` 문제도 염두해 수정할 것
 <br/><br/><br/>
 
 # 프로젝트 관련 포스팅
@@ -42,3 +45,4 @@
 - [Level 1-5 : 코드 개선 퀴즈 - JPA 의 이해](https://development-diary-for-me.tistory.com/198)
 - [Level 2-1 : JPA Cascade](https://development-diary-for-me.tistory.com/199)
 - [Level 2-2 : N+1](https://development-diary-for-me.tistory.com/200)
+- [Level 2-3 : QueryDSL](https://development-diary-for-me.tistory.com/201)

@@ -6,4 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface QueryTodoRepository {
     Page<Todo> findAllWithSearchCondition(Pageable pageable, String weather, String periodStart, String PeriodEnd);
+
+    Todo findByTodoId(Long todoId);
 }

@@ -1,8 +1,10 @@
 package org.example.expert.domain.todo.repository;
 
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import lombok.RequiredArgsConstructor;
+import org.example.expert.domain.common.exception.InvalidRequestException;
 import org.example.expert.domain.todo.entity.Todo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -12,13 +14,17 @@ import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.example.expert.domain.common.convertor.DateTimeConvertor.convertStringToLocalDatetime;
+import static org.example.expert.domain.todo.entity.QTodo.todo;
+import static org.example.expert.domain.user.entity.QUser.user;
 
 @Repository
 @RequiredArgsConstructor
 public class QueryTodoRepositoryImpl implements QueryTodoRepository {
     private final EntityManager entityManager;
+    private final JPAQueryFactory jpaQueryFactory;
 
     @Override
     public Page<Todo> findAllWithSearchCondition(
@@ -71,5 +77,15 @@ public class QueryTodoRepositoryImpl implements QueryTodoRepository {
         String jpql = "SELECT COUNT(*) FROM Todo AS t";
         TypedQuery<Long> query = entityManager.createQuery(jpql, Long.class);
         return query.getSingleResult();
+    }
+
+    @Override
+    public Todo findByTodoId(Long todoId) {
+        return Optional.ofNullable(jpaQueryFactory
+                        .selectFrom(todo)
+                        .join(todo.user, user).fetchJoin()
+                        .where(todo.id.eq(todoId))
+                        .fetchOne())
+                .orElseThrow(() -> new InvalidRequestException("Todo not found"));
     }
 }
